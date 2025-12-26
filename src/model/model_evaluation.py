@@ -26,7 +26,6 @@ if not dagshub_token:
 os.environ["MLFLOW_TRACKING_USERNAME"] = dagshub_token
 os.environ["MLFLOW_TRACKING_PASSWORD"] = dagshub_token
 
-#dagshub.init(repo_owner='Pravat-21', repo_name='ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction', mlflow=True)
 mlflow.set_tracking_uri("https://dagshub.com/Pravat-21/ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction.mlflow")
 
 mlflow.set_experiment("DVC-Pipeline-Model Evaluation")

@@ -1,0 +1,26 @@
+# local package
+-e .
+
+# external requirements
+python-dotenv>=0.5.1
+pandas
+numpy
+matplotlib
+plotly
+nbformat>=4.2.0
+seaborn
+missingno
+scikit-learn
+ipykernel
+haversine
+statsmodels
+mlflow<3
+dagshub
+optuna
+xgboost
+lightgbm
+dvc
+dvc[dagshub]
+pytest
+python-multipart
+dvc[s3]

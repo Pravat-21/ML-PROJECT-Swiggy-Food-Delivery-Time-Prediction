@@ -1,0 +1,37 @@
+name: CI-CD Pipeline
+
+on: push
+
+jobs:
+  project-testing:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+
+    - name: setup python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Configure DVC remote credentials
+      run: |
+        dvc remote modify origin --local access_key_id ${{ secrets.DAGSHUB_S3_KEY_ID }}
+        dvc remote modify origin --local secret_access_key ${{ secrets.DAGSHUB_S3_SEC_ACCESS }}
+
+    - name: Pull data with DVC
+      run: |
+        dvc pull
+    
+    - name: DVC repro
+      run: |
+        dvc repro
+
+    
+

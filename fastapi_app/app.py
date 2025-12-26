@@ -28,8 +28,8 @@ file_logger = file_logging("Model_register_file")
 console_logger = console_logging("Model_register_console")
 #=======================================================================================================
 #load_dotenv()
-dagshub.init(repo_owner='Pravat-21', repo_name='Swiggy-Delivery-Time-Prediction', mlflow=True)
-mlflow.set_tracking_uri("https://dagshub.com/Pravat-21/Swiggy-Delivery-Time-Prediction.mlflow")
+dagshub.init(repo_owner='Pravat-21', repo_name='ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction', mlflow=True)
+mlflow.set_tracking_uri("https://dagshub.com/Pravat-21/ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction.mlflow")
 
 #=======================================================================================================
 

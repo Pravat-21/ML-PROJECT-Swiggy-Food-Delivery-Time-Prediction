@@ -35,8 +35,8 @@ class TestModelLoading(unittest.TestCase):
         # # Set up MLflow tracking URI
         # mlflow.set_tracking_uri(f'{dagshub_url}/{repo_owner}/{repo_name}.mlflow')
 
-        dagshub.init(repo_owner='Pravat-21', repo_name='Swiggy-Delivery-Time-Prediction', mlflow=True)
-        mlflow.set_tracking_uri("https://dagshub.com/Pravat-21/Swiggy-Delivery-Time-Prediction.mlflow")
+        dagshub.init(repo_owner='Pravat-21', repo_name='ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction', mlflow=True)
+        mlflow.set_tracking_uri("https://dagshub.com/Pravat-21/ML-PROJECT-Swiggy-Food-Delivery-Time-Prediction.mlflow")
 
 
         # Load the new model from MLflow model registry

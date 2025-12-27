@@ -51,7 +51,7 @@ jobs:
       if: success()
       env:
         DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
-      run: python -m unittest tests/api_endpoint_test.py
+      run: python -m unittest tests/api_endopoint_test.py
       
     
 

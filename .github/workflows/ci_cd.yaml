@@ -35,5 +35,25 @@ jobs:
       run: |
         dvc repro
 
+    - name: Run model tests
+      env:
+        DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+      run: |
+        python -m unittest tests/model_performance.py
+    
+    - name: Promote model to production
+      if: success()
+      env:
+        DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+      run: python scripts/model_promote.py
+    
+    - name: Run FastAPI app tests
+      if: success()
+      env:
+        DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+      run: python -m unittest tests/api_endpoint_test.py
+      
+    
+
     
 

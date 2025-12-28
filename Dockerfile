@@ -11,13 +11,14 @@ WORKDIR /app
 COPY fastapi_app/ /app/
 
 # install the packages
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # copy the app contents
 COPY ./models/processor.pkl ./models/processor.pkl
-COPY ./src/logger.py ./src/logger.py
-COPY ./src/utils.py ./src/utils.py
-COPY ./src/exception.py ./src/exception.py
+#COPY ./src/logger.py ./src/logger.py
+#COPY ./src/utils.py ./src/utils.py
+#COPY ./src/exception.py ./src/exception.py
+COPY src/ ./src/
 COPY ./reports/models_info.json ./reports/models_info.json
 
 # expose the port

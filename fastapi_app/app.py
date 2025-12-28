@@ -1,21 +1,13 @@
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from sklearn.pipeline import Pipeline
-from dotenv import load_dotenv
 import uvicorn
 import pandas as pd
 import mlflow
 from fastapi.responses import StreamingResponse
 import json
 import io
-import pickle
-from mlflow import MlflowClient
-from fastapi import FastAPI, Request, UploadFile, File
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
-from fastapi.staticfiles import StaticFiles
-from sklearn import set_config
+from fastapi import FastAPI, UploadFile, File
 import dagshub
 from src.exception import CustomException
 import sys

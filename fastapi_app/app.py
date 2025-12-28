@@ -95,7 +95,7 @@ def get_latest_model_version(model_name):
     
 #root = Path(__file__).parent.parent
 
-processor_path = "models"/"processor.pkl"
+processor_path = "models/processor.pkl"
 
 processor = load_processor(processor_path)
 

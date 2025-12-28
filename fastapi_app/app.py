@@ -93,9 +93,9 @@ def get_latest_model_version(model_name):
         console_logger.error(f'Unexpected error occurred while get_latest_model_version: {e}')
         raise CustomException(e,sys)
     
-root = Path(__file__).parent.parent
+#root = Path(__file__).parent.parent
 
-processor_path = root/"models"/"processor.pkl"
+processor_path = "models"/"processor.pkl"
 
 processor = load_processor(processor_path)
 

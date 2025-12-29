@@ -116,7 +116,7 @@ app = FastAPI()
 
 @app.get("/")
 def home():
-    return "Hello, welcome to swiggy time prediciton page"
+    return "Hello, welcome to swiggy time prediciton first page"
 
 @app.post(path="/predict")
 def do_predictions(data: Data):

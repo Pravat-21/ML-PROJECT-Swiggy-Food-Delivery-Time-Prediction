@@ -20,7 +20,7 @@ class FastAPIPredictTests(unittest.TestCase):
     def test_home_page(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-        self.assertIn("hello, welcome to swiggy time prediciton page", response.text.lower())
+        self.assertIn("hello, welcome to swiggy time prediciton first page", response.text.lower())
 
     def test_predict_success(self):
         response = self.client.post("/predict", json=self.data)
